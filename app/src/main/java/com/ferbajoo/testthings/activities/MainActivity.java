@@ -18,7 +18,9 @@ import com.ferbajoo.testthings.models.ClassModel;
 
 import java.io.Serializable;
 import java.util.List;
-
+/**
+*ejemplo de comentario
+*/
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
