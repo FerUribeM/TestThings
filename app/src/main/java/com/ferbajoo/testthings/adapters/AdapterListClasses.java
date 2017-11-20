@@ -21,9 +21,9 @@ import java.util.List;
 
 public class AdapterListClasses extends RecyclerView.Adapter<AdapterListClasses.AdapterListClassesViewHolder>{
 
-    private List<ClassModel> classes = new ArrayList<>();
+    private ArrayList<ClassModel> classes = new ArrayList<>();
 
-    public AdapterListClasses(List<ClassModel> classes) {
+    public AdapterListClasses(ArrayList<ClassModel> classes) {
         this.classes = classes;
     }
 
