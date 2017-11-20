@@ -5,12 +5,14 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ferbajoo.testthings.R;
-import com.ferbajoo.testthings.interfaces.Foo;
+//import com.ferbajoo.testthings.interfaces.Foo;
+import com.mavi.processor.Foo;
 
 /**
  * Created by
  *          feuribe on 16/11/2017.
  */
+//@Foo(name = "JSActivityTest", value = "Prueba para funciones JavaScript en Android", drawable = R.mipmap.ic_android_javascript)
 @Foo(name = "JSActivityTest", value = "Prueba para funciones JavaScript en Android", drawable = R.mipmap.ic_android_javascript)
 public class JSActivityTest extends AppCompatActivity{
 

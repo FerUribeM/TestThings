@@ -1,4 +1,4 @@
-package com.ferbajoo.testthings.interfaces;
+package com.mavi.processor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,12 +7,13 @@ import java.lang.annotation.Target;
 
 /**
  * Created by
- *          feuribe on 16/11/2017.
+ * cagonzalez on 19/11/2017.
  */
-@Retention(RetentionPolicy.RUNTIME)
+
 @Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Foo {
-    String name();
-    String value();
+    String name() default "";
+    String value() default  "";
     int drawable();
 }
