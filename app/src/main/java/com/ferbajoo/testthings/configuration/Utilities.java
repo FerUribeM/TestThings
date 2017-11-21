@@ -1,12 +1,7 @@
 package com.ferbajoo.testthings.configuration;
 
 //import com.ferbajoo.testthings.interfaces.Foo;
-import com.ferbajoo.testthings.models.ClassModel;
-import com.mavi.processor.Foo;
 
-import java.lang.annotation.Annotation;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by
