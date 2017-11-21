@@ -13,12 +13,6 @@ import android.view.MenuItem;
 import com.ferbajoo.testthings.GlobalClasses;
 import com.ferbajoo.testthings.R;
 import com.ferbajoo.testthings.adapters.AdapterListClasses;
-import com.ferbajoo.testthings.configuration.Configuration;
-import com.ferbajoo.testthings.configuration.Utilities;
-import com.ferbajoo.testthings.models.ClassModel;
-
-import java.io.Serializable;
-import java.util.List;
 /**
 *ejemplo de comentario
 */

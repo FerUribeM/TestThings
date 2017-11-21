@@ -4,9 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.ferbajoo.annotation.Foo;
 import com.ferbajoo.testthings.R;
-//import com.ferbajoo.testthings.interfaces.Foo;
-import com.mavi.processor.Foo;
 
 /**
  * Created by

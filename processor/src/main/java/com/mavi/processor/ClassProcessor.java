@@ -1,5 +1,6 @@
 package com.mavi.processor;
 
+import com.ferbajoo.annotation.Foo;
 import com.google.auto.service.AutoService;
 import com.google.common.collect.ImmutableList;
 
@@ -43,7 +44,8 @@ public class ClassProcessor extends AbstractProcessor {
                 .append("com.ferbajoo.testthings.models.ClassModel")
                 .append(";\n")
                 .append("import\t")
-                .append("com.mavi.processor.Foo")
+                //.append("com.ferbajoo.annotation.Foo")
+                .append(com.ferbajoo.annotation.Foo.class.getCanonicalName()) //get package from class Foo
                 .append(";\n\n")
                 .append("import\t")
                 .append("java.lang.annotation.Annotation")

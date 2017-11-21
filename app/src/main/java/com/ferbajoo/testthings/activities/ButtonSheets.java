@@ -5,8 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ferbajoo.testthings.R;
-import com.mavi.processor.Foo;
-//import com.ferbajoo.testthings.interfaces.Foo;
+import com.ferbajoo.annotation.Foo;
 
 /**
  * Created by
