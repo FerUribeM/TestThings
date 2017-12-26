@@ -19,8 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.JSActivityTest"/>
-        <activity android:name=".activities.ButtonSheets" />
+        <activity android:name=".activities.JSTestActivity"/>
+        <activity android:name=".activities.BottonSheetsActivity" />
+        <activity android:name=".activities.CircleAnimationActivity" />
     </application>
 
 </manifest>

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Test Things</string>
     <string name="action_settings">Settings</string>
+    <string name="WRITE_ON_HTML">file:///android_asset/www/write_on.html</string>
+    <string name="js_tittle">Javascript</string>
+    <string name="circle_animation_tittle">Circle Animation</string>
+    <string name="bottom_sheet">Bottom Sheet Android</string>
 </resources>

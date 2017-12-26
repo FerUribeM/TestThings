@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+    <ImageView
+        android:id="@+id/iv_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_father"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="visible"
+            android:src="@drawable/ic_play_circle_outline_black_24dp"
+            app:backgroundTint="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/fab_child_one"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_attach_money_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_two"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_audiotrack_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_three"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_attach_file_black_24dp"
+            android:background="@drawable/circle_shape"/>
+
+        <ImageView
+            android:id="@+id/fab_child_four"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_beach_access_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_five"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_bug_report_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_six"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_directions_bike_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_seven"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+        <ImageView
+            android:id="@+id/fab_child_eight"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
+            android:src="@drawable/ic_flash_on_black_24dp"
+            android:background="@drawable/circle_shape" />
+
+
+</android.support.design.widget.CoordinatorLayout>

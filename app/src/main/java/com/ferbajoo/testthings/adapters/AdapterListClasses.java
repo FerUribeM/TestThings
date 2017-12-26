@@ -12,7 +12,6 @@ import com.ferbajoo.testthings.databinding.ListClassesLayoutBinding;
 import com.ferbajoo.testthings.models.ClassModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by
@@ -60,7 +59,7 @@ public class AdapterListClasses extends RecyclerView.Adapter<AdapterListClasses.
              if (getAdapterPosition() > -1) {
                  String packages = view.getContext().getPackageName();
                  Intent intent = new Intent(Intent.ACTION_MAIN);
-                 intent.setComponent(new ComponentName(packages, packages+ ".activities." +classes.get(getAdapterPosition()).getName()));
+                 intent.setComponent(new ComponentName(packages, packages+ ".activities." + classes.get(getAdapterPosition()).getName()));
                  view.getContext().startActivity(intent);
              }
          }
