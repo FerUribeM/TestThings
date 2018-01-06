@@ -5,4 +5,5 @@
     <string name="js_tittle">Javascript</string>
     <string name="circle_animation_tittle">Circle Animation</string>
     <string name="bottom_sheet">Bottom Sheet Android</string>
+    <string name="accelerometer_tittle">Acelerometro</string>
 </resources>

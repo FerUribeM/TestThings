@@ -21,19 +21,8 @@ import com.ferbajoo.testthings.Utilities;
 @Foo(name = "CircleAnimationActivity", value = "Animacion circular en android", drawable = R.drawable.circle_animation)
 public class CircleAnimationActivity extends AppCompatActivity {
 
-    private ImageView imageView;
     private ImageView[] mFloats;
-    private Point[] mPoints = {
-            new Point(-450, -0),
-            new Point(-340, -370),
-            new Point(-0, -480),
-            new Point(360, -340),
-            new Point(450, 0),
-            new Point(370, 350),
-            new Point(2, 510),
-            new Point(-350, 350)
-
-    };
+    private Point[] mPoints;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,7 +32,8 @@ public class CircleAnimationActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         Utilities.getToolbar(this, toolbar,getString(R.string.circle_animation_tittle));
 
-        imageView = findViewById(R.id.iv_circle);
+        fillPoints();
+
         mFloats = new ImageView[]{
                 findViewById(R.id.fab_child_one),
                 findViewById(R.id.fab_child_two),
@@ -57,6 +47,20 @@ public class CircleAnimationActivity extends AppCompatActivity {
         findViewById(R.id.fab_father).setOnClickListener(float_click);
 
         startCircleAnimation(0, false);
+    }
+
+    private void fillPoints() {
+        boolean land = Utilities.isLanscape(this);
+           mPoints = new Point[]{
+                   new Point(land ? -207 :-450 , -0),
+                   new Point(land ? -470 :-340, land ? -0 :-370),
+                   new Point(land ? -720 : 0, land ? -0 : -480),
+                   new Point(land ? 270 : 360, land ? -0 :-340),
+                   new Point(land ? 540 : 450, 0),
+                   new Point(land ? 770 : 370, land ? 0 : 350),
+                   new Point(2, land ? -250 : 510),
+                   new Point(land ? 2:-350,land ? 275 : 350)
+           };
     }
 
     @Override

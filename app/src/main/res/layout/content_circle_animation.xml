@@ -12,11 +12,6 @@
         layout="@layout/toolbar"/>
 
 
-    <ImageView
-        android:id="@+id/iv_circle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_father"
