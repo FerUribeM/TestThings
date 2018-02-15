@@ -22,7 +22,8 @@
         <activity android:name=".activities.JSTestActivity" />
         <activity android:name=".activities.BottonSheetsActivity" />
         <activity android:name=".activities.CircleAnimationActivity" />
-        <activity android:name=".activities.AccelerometerActivity"></activity>
+        <activity android:name=".activities.AccelerometerActivity" />
+        <activity android:name=".activities.PaintActivity"></activity>
     </application>
 
 </manifest>

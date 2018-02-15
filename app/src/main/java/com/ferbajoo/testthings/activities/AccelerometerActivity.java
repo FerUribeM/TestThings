@@ -21,7 +21,7 @@ import com.ferbajoo.testthings.Utilities;
  * feuribe on 16/11/2017. https://es.androids.help/q19328
  */
 @Foo(name = "AccelerometerActivity", value = "Uso de accelerometro del dispositivo", drawable = R.drawable.accelemeter)
-public class AccelerometerActivity extends AppCompatActivity implements SensorEventListener{
+public class AccelerometerActivity extends AppCompatActivity implements SensorEventListener {
 
 
     private SensorManager sensorManager;
@@ -34,24 +34,24 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        Utilities.getToolbar(this, toolbar,getString(R.string.accelerometer_tittle));
+        Utilities.getToolbar(this, toolbar, getString(R.string.accelerometer_tittle));
 
 
         sensorManager =
                 (SensorManager) getSystemService(SENSOR_SERVICE);
-        if (sensorManager != null){
+        if (sensorManager != null) {
             proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
             gyroscopeSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
             rotationVectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
 
-            if (proximitySensor == null){
+            if (proximitySensor == null) {
                 Toast.makeText(this, "No esta disponible en sensor de aproximidad", Toast.LENGTH_SHORT).show();
                 return;
             }
-            if (gyroscopeSensor == null){
+            if (gyroscopeSensor == null) {
                 Toast.makeText(this, "No esta disponible en sensor giroscopio", Toast.LENGTH_SHORT).show();
             }
-            if (rotationVectorSensor == null){
+            if (rotationVectorSensor == null) {
                 Toast.makeText(this, "No esta disponible en sensor rotation", Toast.LENGTH_SHORT).show();
             }
         }
@@ -61,9 +61,9 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
     @Override
     protected void onResume() {
         super.onResume();
-        sensorManager.registerListener(this,proximitySensor, 2 * 1000 * 1000);
-        sensorManager.registerListener(this, gyroscopeSensor,SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager.registerListener(this, rotationVectorSensor,SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, proximitySensor, 2 * 1000 * 1000);
+        sensorManager.registerListener(this, gyroscopeSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, rotationVectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 break;
@@ -86,40 +86,44 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        if (sensorEvent.sensor == proximitySensor){
-            if(sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
+        if (sensorEvent.sensor == proximitySensor) {
+            if (sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
                 // Detected something nearby
                 getWindow().getDecorView().setBackgroundColor(Color.RED);
             } else {
                 // Nothing is nearby
                 getWindow().getDecorView().setBackgroundColor(Color.GREEN);
             }
-        }else  if (sensorEvent.sensor == gyroscopeSensor){
-
-        }else {
+        } else if (sensorEvent.sensor == gyroscopeSensor) {
+            if (sensorEvent.values[2] > 0.5f) { // anticlockwise
+                getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+            } else if (sensorEvent.values[2] < -0.5f) { // clockwise
+                getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+            }
+        } else {
             float[] rotationMatrix = new float[16];
             SensorManager.getRotationMatrixFromVector(
                     rotationMatrix, sensorEvent.values);
-// Remap coordinate system
+            // Remap coordinate system
             float[] remappedRotationMatrix = new float[16];
             SensorManager.remapCoordinateSystem(rotationMatrix,
                     SensorManager.AXIS_X,
                     SensorManager.AXIS_Z,
                     remappedRotationMatrix);
 
-// Convert to orientations
+            // Convert to orientations
             float[] orientations = new float[3];
             SensorManager.getOrientation(remappedRotationMatrix, orientations);
 
-            for(int i = 0; i < 3; i++) {
-                orientations[i] = (float)(Math.toDegrees(orientations[i]));
+            for (int i = 0; i < 3; i++) {
+                orientations[i] = (float) (Math.toDegrees(orientations[i]));
             }
 
-            if(orientations[2] > 45) {
+            if (orientations[2] > 45) {
                 getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-            } else if(orientations[2] < -45) {
+            } else if (orientations[2] < -45) {
                 getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-            } else if(Math.abs(orientations[2]) < 10) {
+            } else if (Math.abs(orientations[2]) < 10) {
                 getWindow().getDecorView().setBackgroundColor(Color.WHITE);
             }
         }
