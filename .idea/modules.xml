@@ -3,12 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TestThings.iml" filepath="$PROJECT_DIR$/TestThings.iml" />
-      <module fileurl="file://C:\Users\cagonzalez\Desktop\TestThings\TestThings.iml" filepath="C:\Users\cagonzalez\Desktop\TestThings\TestThings.iml" />
       <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\cagonzalez\Desktop\TestThings\app\app.iml" filepath="C:\Users\cagonzalez\Desktop\TestThings\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/processor/processor.iml" filepath="$PROJECT_DIR$/processor/processor.iml" />
-      <module fileurl="file://C:\Users\pamendoza\Desktop\TestThings\processor\processor.iml" filepath="C:\Users\pamendoza\Desktop\TestThings\processor\processor.iml" />
     </modules>
   </component>
 </project>

@@ -19,10 +19,21 @@ public class ClassModel implements Serializable{
 
     private int drawable;
 
-    public ClassModel(String name, String description, int drawable) {
+    private String fullPath;
+
+    public ClassModel(String name, String description, int drawable, String fullpath) {
         this.name = name;
         this.description = description;
         this.drawable = drawable;
+        this.fullPath = fullpath;
+    }
+
+    public String getFullPath() {
+        return fullPath;
+    }
+
+    public void setFullPath(String fullPath) {
+        this.fullPath = fullPath;
     }
 
     public String getName() {
