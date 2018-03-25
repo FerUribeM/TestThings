@@ -60,7 +60,9 @@ public class AdapterListClasses extends RecyclerView.Adapter<AdapterListClasses.
              if (getAdapterPosition() > -1) {
                  String packages = view.getContext().getPackageName();
                  Intent intent = new Intent(Intent.ACTION_MAIN);
-                 intent.setComponent(new ComponentName(packages, packages+ ".activities." +classes.get(getAdapterPosition()).getName()));
+                 intent.setComponent(new ComponentName(packages,
+                         classes.get(getAdapterPosition()).getFullPath()
+                 ));
                  view.getContext().startActivity(intent);
              }
          }
