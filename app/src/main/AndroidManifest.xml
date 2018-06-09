@@ -24,6 +24,7 @@
         <activity android:name=".activities.CircleAnimationActivity" />
         <activity android:name=".activities.AccelerometerActivity" />
         <activity android:name=".activities.PaintActivity"></activity>
+        <activity android:name=".activities.DragDropActivity" />
     </application>
 
 </manifest>
