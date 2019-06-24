@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.ferbajoo.annotation.Foo;
 import com.ferbajoo.testthings.R;
 import com.ferbajoo.testthings.Utilities;
 
@@ -19,7 +20,7 @@ import com.ferbajoo.testthings.Utilities;
  * Created by
  * feuribe on 16/11/2017. https://es.androids.help/q19328
  */
-//@Foo(name = "AccelerometerActivity", value = "Uso de accelerometro del dispositivo", drawable = R.drawable.accelemeter)
+@Foo(name = "AccelerometerActivity", value = "Uso de accelerometro del dispositivo", drawable = R.drawable.accelemeter)
 public class AccelerometerActivity extends AppCompatActivity implements SensorEventListener {
 
 
@@ -36,8 +37,7 @@ public class AccelerometerActivity extends AppCompatActivity implements SensorEv
         Utilities.getToolbar(this, toolbar, getString(R.string.accelerometer_tittle));
 
 
-        sensorManager =
-                (SensorManager) getSystemService(SENSOR_SERVICE);
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         if (sensorManager != null) {
             proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
             gyroscopeSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);

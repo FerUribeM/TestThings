@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class AdapterListClasses extends RecyclerView.Adapter<AdapterListClasses.AdapterListClassesViewHolder>{
 
-    private ArrayList<ClassModel> classes = new ArrayList<>();
+    private ArrayList<ClassModel> classes;
 
     public AdapterListClasses(ArrayList<ClassModel> classes) {
         this.classes = classes;

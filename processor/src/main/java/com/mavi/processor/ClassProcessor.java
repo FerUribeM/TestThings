@@ -44,7 +44,6 @@ public class ClassProcessor extends AbstractProcessor {
                 .append("com.ferbajoo.testthings.models.ClassModel")
                 .append(";\n")
                 .append("import\t")
-                //.append("com.ferbajoo.annotation.Foo")
                 .append(com.ferbajoo.annotation.Foo.class.getCanonicalName()) //get package from class Foo
                 .append(";\n\n")
                 .append("import\t")
@@ -58,9 +57,6 @@ public class ClassProcessor extends AbstractProcessor {
                 .append("public final class ")
                 .append("GlobalClasses")
                 .append("{\n\n")
-                //.append("\tpublic static ArrayList<Class> all_classes = new ArrayList<>();")
-                //.append("\n\t")
-                //.append("static {")
                 .append("\tpublic static ArrayList<Class> all_classes = new ArrayList<>();")
                 .append("\n\t")
                 .append("static {")
@@ -69,11 +65,6 @@ public class ClassProcessor extends AbstractProcessor {
 
             builder.append("\n\t\t")
                     .append("all_classes.add(" + type.asType().toString() + ".class);");
-            //builder.append("\n\t//for class" + type.asType().toString());
-            //builder.append("\n\tpublic static void LogT(");
-            //builder.append(type.asType().toString() + " e){");
-            //builder.append("\n\t\tLog.d(\"MAVI PROCESSOR\", e.toString());");
-            //builder.append("\n\t}");
         }
         builder.append("\n\t")
                 .append("}");
@@ -119,20 +110,6 @@ public class ClassProcessor extends AbstractProcessor {
         }
 
         return true;
-    }
-
-
-    private static Set<Element> getAnnotatedElements(
-            Elements elements,
-            TypeElement type,
-            Class<? extends Annotation> annotation)
-    {
-        Set<Element> found = new HashSet<Element>();
-        for (Element e : elements.getAllMembers(type)) {
-            if (e.getAnnotation(annotation) != null)
-                found.add(e);
-        }
-        return found;
     }
 
     @Override

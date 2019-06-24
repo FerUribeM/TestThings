@@ -7,4 +7,8 @@
     <string name="bottom_sheet">Bottom Sheet Android</string>
     <string name="accelerometer_tittle">Acelerometro</string>
     <string name="paint_layout_tittle">Pintar layout</string>
+    <string name="warning">Alerta</string>
+
+    <string name="permissions">Esta aplicación necesita los permisos para poder trabajar correctamente, de lo contrario no podra usarse.</string>
+    <string name="configuration">Configuracion</string>
 </resources>

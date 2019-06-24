@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ferbajoo.testthings">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.hardware.sensor.gyroscope"/>
+    <uses-permission android:name="android.hardware.sensor.accelerometer"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +30,12 @@
         <activity android:name=".activities.BottonSheetsActivity" />
         <activity android:name=".activities.CircleAnimationActivity" />
         <activity android:name=".activities.AccelerometerActivity" />
-        <activity android:name=".activities.PaintActivity"></activity>
+        <activity android:name=".activities.PaintActivity" />
         <activity android:name=".activities.DragDropActivity" />
+        <activity android:name=".activities.SignatureActivity" />
+        <activity android:name=".activities.TinderActivity" />
+        <activity android:name=".activities.LottieAnimationActivity" />
+        <activity android:name=".activities.VisitorPatternActivity" />
     </application>
 
 </manifest>
